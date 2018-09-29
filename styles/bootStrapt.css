@@ -1,0 +1,28 @@
+body {
+    background-image: url(../images/bg_main.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.enterButton{
+    width: 200px;
+    height: 80px;
+    font-size: 18px;
+}
+
+.bigButton {
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+}
