@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>Main</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <!--三个大按钮-->
+        <div style="width: 250px; height: 130px" class="container center">
+            <button id="enter_bt" class="btn btn-warning btn-large enterButton" type="button" data-toggle="modal" data-target="#myModal">Enter</button>
+            <button class="btn btn-large btn-info bigButton" type="button">Join</button>
+            <button id="" class="btn btn-large btn-success bigButton" type="button">Login</button>
+        </div>
+
+    </div>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        遮罩层标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" action="#" method="post" id="login_form">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="用户名:admin" name="username" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="密码:1234" name="password" type="password"
+                                       value="">
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <a href="javascript:void(0)" class="btn btn-lg btn-success btn-block" id='login_btn'>登录</a>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+</div>
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#login_btn").click(function () {
+            $.ajax({
+                url: "http://localhost:8080/hrms/dologin",
+                type: "POST",
+                data: $("#login_form").serialize(),
+                dataType: 'json',
+                crossDomain: true,
+                success: function (result) {
+                    if (result.code == 100) {
+                        window.location.href = "http://localhost:8080/hrms/main";
+                    } else {
+                        alert(result.extendInfo.login_error);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#enter_bt").click(function () {
+            // window.location.href = "http://localhost:8080/hrms/main";
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#login_bt").click(function () {
+            $("login_div").style.visibility = "visibility";
+        });
+    });
+</script>
+
+</body>
+
+
+</html>
