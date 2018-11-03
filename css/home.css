@@ -1,1 +1,4 @@
-#banner_img
+#banner_img img {
+    height: 200px;
+    width: 100%;
+}
