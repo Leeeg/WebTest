@@ -1,4 +1,8 @@
 .head_root{
-    background-color: #5e5e5e;
-    height: 100px;
+    background-color: #0f0f0f;
+    height: 70px;
+    width: 100%;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 1000;
 }
