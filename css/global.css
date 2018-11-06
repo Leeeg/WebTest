@@ -1,3 +1,23 @@
-.default{
+.default {
     background-color: #5e5e5e;
 }
+
+.center-xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-y-wh {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.center-xy-info{
+    text-align: center;
+    /*background-color: #5e5e5e;*/
+}
+
+
