@@ -105,3 +105,12 @@
     border: 1px outset #5e5e5e;
 }
 
+#top_nick {
+    float: right;
+    position: relative;
+    top: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #5e5e5e;
+}
+
