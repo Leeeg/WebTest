@@ -20,4 +20,30 @@
     /*background-color: #5e5e5e;*/
 }
 
+.color-title{
+    color: whitesmoke;
+    /*color: black;*/
+}
+
+.color-content{
+    color: whitesmoke;
+    /*color: black;*/
+}
+
+.color-slid{
+    color: #5e5e5e;
+}
+
+.color-menu{
+    color: orange;
+}
+
+.color-background{
+    background-color: #5e5e5e;
+}
+
+.color-container{
+    color: #5e5e5e;
+}
+
 
